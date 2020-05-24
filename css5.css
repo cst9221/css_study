@@ -1,0 +1,62 @@
+.container {
+  padding-top: 50px;
+  background: beige;
+  height: 30vh;
+  display: flex;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.item1 {
+  background: #ef9a9a;
+  /* flex-grow는 지정한 크기를 넘어갈 때 어떻게 할 것인가를 결정해주는것이다.
+   화면이 필요이상으로 커지면 item1,2,3은 화면을 채우기 위해 늘어나게 되고
+   늘어나는 비율이 3:1:1비율로 늘어나게 된다. (전체 크기가 3:1:1이 아니라 늘어나는비율을 말한다.) */
+  flex-grow: 3;
+  flex-shrink: 1;
+}
+.item2 {
+  background: #90caf9;
+  flex-grow: 1;
+  /* flex-shrink는 flex-grow와는 반대로 1:3:1의 비율로 줄어들게 된다.
+  페이지를 줄여보면 item2은 item1,item3보다 더 빠르게 줄어든다. */
+  flex-shrink: 3;
+}
+.item3 {
+  background: #ce93d8;
+  /* grow, shrink, basis */
+  flex: 1 1 auto;
+  /* 해당 item만 유동적이게 위치시킬수 있다. */
+  align-self: center;
+}
+/* ------------------------- */
+.container1 {
+  padding-top: 50px;
+  background: #000;
+  height: 30vh;
+  display: flex;
+}
+.item1 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+.item1-1 {
+  background: #ef9a9a;
+  flex-basis: 60%;
+}
+.item1-2 {
+  background: #90caf9;
+  flex-basis: 30%
+}
+.item1-3 {
+  background: #ce93d8;
+  /* flex-basis는 auto로 지정하면 grow와 shrink를 따르지만 비율로 지정하게 되면
+  항상 비율을 유지하려 하게 된다(극단적인 상황X) */
+  flex-basis: 10%;
+}
+/* https://flexboxfroggy.com/#ko */
