@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>css_study</title>
+    <link rel="stylesheet" href="css3.css">
+  </head>
+  <body>
+    <!-- position -->
+    <!--  left, top으로 position을 조정했지만 변화가 없다.
+    이유는 position의 default는 static이기 때문이다.  -->
+    <article class="container">
+      <div></div>
+      <!-- .box의 position을 relative로 하고 위치값을 준다면
+    .box는 원래의 위치에서 주어진 위치값만큼 '상대적으로' 이동한다.   -->
+      <div class="box">relative</div>
+      <div></div>
+      <!-- .box1의 position은 absolute로 지정하니 container내에서
+    주어진 위치값만큼 이동한다. -->
+      <div class="box1">absolute</div>
+      <div></div>
+      <!-- position을 sticky로 지정하면 원래 위치에 있지만 화면이 지나가면 따라붙게(?)된다  -->
+      <div class="box2">sticky</div>
+      <div></div>
+      <!-- position을 fixed로 지정하면 처음에는 웹페이지의 지정된 곳에 고정된다.
+    화면이 움직이여도 사용자에게 고정되어 보여진다. -->
+      <div class="box3">fixed</div>
+    </article>
+  </body>
+</html>
